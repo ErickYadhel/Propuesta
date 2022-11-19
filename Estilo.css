@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-image: linear-gradient(135deg, red,#00e7d4, #505488,#ef3f80,#161569, #ef3f80, #505488, #00E7D4);
+    background-size: 500%;
+    animation: fanimado 60s infinite;
+    -webkit-animation: fanimado 60s infinite;
+}
+
+.Contenedor{
+
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+p{
+    font-size: xx-large;
+    padding: 5%;
+}
+
+button{
+    font-size: xx-large;
+    padding: 0.75em;
+}
+
+.transparente{
+    opacity: 0;
+}
+
+#Yesbtn{
+    transform: translate(-100%,0);
+    background: url(/si.png);
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transform: translate(-100%, -0%);
+    -moz-transform: translate(-100%, -0%);
+    -ms-transform: translate(-100%, -0%);
+    -o-transform: translate(-100%, -0%);
+}
+
+#Yesbtn::before{
+    content: 'Si, Mi bebe Te amo';
+    font-weight: bold;
+    color: white;
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    transition: all .5s ease-in-out;
+  }
+  
+  #Yesbtn:hover::before{
+    top: -30px;
+  }
+  
+  #Yesbtn::after {
+    font-family: 'FontAwesome';
+    content: "\f004";
+    font-size: 40px;
+    color: red;
+    position: absolute;
+    top: 150%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    transition: all .5s ease-in-out;
+  }
+  
+  #Yesbtn:hover::after {
+    top: 50%;
+  }
+
+
+
+#noBtn{
+    position: absolute;
+    background: url(/no.png);
+    color: red;
+}
+
+@keyframes animat {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fanimado{
+    0%{
+        background-image: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.letra{
+    color: white;
+}
